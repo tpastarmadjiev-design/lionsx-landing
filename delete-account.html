@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account — LIONS-X</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0f12;--bg-card:#18181d;--bg-elevated:#222228;--fg:#f0ede8;--fg-muted:#7a7a85;--primary:#FFB800;--border:#2a2a30;--danger:#d44040}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2rem;backdrop-filter:blur(20px);background:rgba(15,15,18,.85);border-bottom:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-icon{width:36px;height:36px;border-radius:8px;background:var(--primary);display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:var(--bg)}
+.logo span{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.4rem;letter-spacing:.15em;color:var(--fg)}
+.nav-back{padding:.65rem 1.4rem;background:transparent;color:var(--fg-muted);text-decoration:none;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;transition:all .3s;border:1px solid var(--border)}
+.nav-back:hover{color:var(--primary);border-color:var(--primary)}
+.hero{padding:8rem 2rem 4rem;text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(212,64,64,.05) 0%,transparent 70%);pointer-events:none}
+.hero-label{display:inline-block;padding:.4rem .9rem;background:rgba(212,64,64,.08);border:1px solid rgba(212,64,64,.2);color:var(--danger);font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem}
+.hero-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2.5rem,5vw,4rem);text-transform:uppercase;margin-bottom:1rem}
+.hero-subtitle{color:var(--fg-muted);max-width:520px;margin:0 auto;font-size:1rem}
+.content{max-width:680px;margin:0 auto;padding:4rem 2rem 6rem}
+.warning-box{background:rgba(212,64,64,.06);border:1px solid rgba(212,64,64,.2);border-left:3px solid var(--danger);padding:1.2rem 1.5rem;margin-bottom:2.5rem}
+.warning-box p{margin:0;color:rgba(240,237,232,.7);font-size:.93rem}
+.warning-box strong{color:var(--danger)}
+.steps{display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem}
+.step{background:var(--bg-card);border:1px solid var(--border);padding:1.5rem;display:flex;gap:1.25rem;align-items:flex-start}
+.step-num{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;color:var(--primary);line-height:1;min-width:2rem}
+.step-body h3{font-family:'Oswald',sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;color:var(--fg)}
+.step-body p{color:var(--fg-muted);font-size:.92rem;margin:0}
+.divider{border:none;border-top:1px solid var(--border);margin:2.5rem 0}
+.email-box{background:var(--bg-card);border:1px solid var(--border);padding:2rem;text-align:center}
+.email-box .label{font-family:'Oswald',sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted);margin-bottom:.75rem}
+.email-box h2{font-family:'Oswald',sans-serif;font-size:1.3rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.75rem}
+.email-box p{color:var(--fg-muted);font-size:.92rem;margin-bottom:1.25rem}
+.email-link{display:inline-block;padding:.9rem 2rem;background:var(--primary);color:var(--bg);font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-size:.9rem;transition:all .3s}
+.email-link:hover{background:transparent;color:var(--primary);outline:2px solid var(--primary)}
+.info-section{margin-top:2.5rem}
+.info-section h3{font-family:'Oswald',sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.75rem;color:var(--fg)}
+.info-section ul{color:var(--fg-muted);padding-left:1.4rem;font-size:.92rem}
+.info-section ul li{margin-bottom:.4rem}
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--fg-muted);font-size:.85rem}
+footer a{color:var(--primary);text-decoration:none;margin:0 .75rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+    </div>
+    <span>LIONS-X</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">Account Management</div>
+  <h1 class="hero-title">Delete Your Account</h1>
+  <p class="hero-subtitle">You can request full deletion of your Lions-X account and all associated data at any time.</p>
+</div>
+
+<div class="content">
+
+  <div class="warning-box">
+    <p><strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your progress, XP, LP, rank, and workout history will be permanently deleted.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <h3>Send us an email</h3>
+        <p>Send a deletion request to <strong style="color:var(--fg)">support@lions-x.com</strong> from the email address associated with your Lions-X account.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <h3>Include your account email</h3>
+        <p>In your email, confirm the email address you used to register. Use subject line: <strong style="color:var(--fg)">"Account Deletion Request"</strong></p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <h3>We process your request</h3>
+        <p>We will confirm receipt within 48 hours and complete the deletion within <strong style="color:var(--fg)">30 days</strong> in accordance with GDPR.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="email-box">
+    <div class="label">Request Deletion</div>
+    <h2>Contact Support</h2>
+    <p>Send your deletion request directly to our support team.</p>
+    <a href="mailto:support@lions-x.com?subject=Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20Lions-X%20account.%0A%0AAccount%20email%3A%20%5Byour%20email%5D%0A%0AThank%20you." class="email-link">Email Us to Delete Account</a>
+  </div>
+
+  <hr class="divider">
+
+  <div class="info-section">
+    <h3>What Gets Deleted</h3>
+    <ul>
+      <li>Your account and login credentials</li>
+      <li>All XP, LP points and rank progress</li>
+      <li>Your complete workout history and training sessions</li>
+      <li>Your profile information and selected country</li>
+      <li>All app activity and analytics data tied to your account</li>
+    </ul>
+  </div>
+
+  <div class="info-section" style="margin-top:1.5rem">
+    <h3>What Is Retained</h3>
+    <ul>
+      <li>Anonymised, aggregated statistics that cannot be linked back to you (e.g. total app workouts completed) may be retained for product analytics.</li>
+    </ul>
+  </div>
+
+  <div class="info-section" style="margin-top:1.5rem">
+    <h3>Changed Your Mind?</h3>
+    <ul>
+      <li>If you submitted a request but wish to cancel it, contact us within 30 days at <a href="mailto:support@lions-x.com" style="color:var(--primary)">support@lions-x.com</a> before deletion is completed.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <div>&copy; 2026 Lions-X. All rights reserved.</div>
+  <div style="margin-top:.5rem">
+    <a href="index.html">Home</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
